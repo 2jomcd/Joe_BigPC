@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>Joe McDonough</title>
+<link href="Joem_style.css" rel="stylesheet">
+
+<script>
+
+var description = new Array("Pismo Beach", "Partner","Kids", "Cat", "Dog", "Cousins");
+var pic = new Array(6);
+var counter = 0;
+
+
+function carousel(){
+ 
+  // Thank you Andy Harris @ http://www.java2s.com/Code/JavaScript/HTML/Imagearray.htm 
+  // Couldn'tadunit without you!
+
+  // define an array of 6 photos
+}
+  pic[0] = new Image(50, 50);
+  pic[0].src = "Pismo.jpg";
+  pic[1] = new Image(50, 50);
+  pic[1].src = "Ken.jpg";
+  pic[2] = new Image(50, 50);
+  pic[2].src = "KLP.jpg";
+  pic[3] = new Image(50, 50);
+  pic[3].src = "Chase.jpg";
+  pic[4] = new Image(50, 50);
+  pic[4].src = "Scout.jpg";
+  pic[5] = new Image(50, 50);
+  pic[5].src = "Cousins.jpg";
+ 
+
+function upDate(){
+  
+  //A function that will cycle through the photos.  upDate creates a counter and increments the counter.  The value outputted by the counter determines which photo and which capition will display.  "++" after Counter creates an operator that returns the value of the variable before it is incremented
+  
+  counter++;
+  if (counter > 5){
+    counter = 0;
+  } 
+  document.Carouselform.imgDisplay.src = pic[counter].src;
+  document.Carouselform.PicCaption.value = description[counter];
+}
+
+</script>
+
+</head>
+
+<body>
+
+<body onLoad = "carousel()">
+
+<img src="skyline.jpg" align="right">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p Style="text-align:right">  San Francisco </p>
+<br>
+<br>
+<h1> Joe McDonough </h1>
+<br>
+<img src="JOEM142SF.jpg" align="center">
+<br>
+<h2> 
+  general manager, investor, and entrepreneur
+</h2>
+
+<br>
+<h2> Joe's Career </h2>
+
+<p>  Joe has enjoyed a varied career in Silicon Valley. He has held corporate and strategic marketing, product marketing, finance, and operations management postions in both large and small companies.  He co-founded Barrington Partners, a venture capital firm, and made series A investments in four companies that reached the public stock market.  Currently he is Founder and Co-owner of Athentica P.B.C. a start-up that connects workforce support organizations to online, skills services. 
+</p>
+
+<p> 
+ Joe is married, has two children, and lives in Belmont, CA.  He came to the Golden State from Boston, MA.  Joe's passions include: all-things-California, computer programming, digital photography, cycling, hiking, and home improvement projects of all kinds.
+</p>
+
+<h2>To Contact Joe or Learn More:</h2>
+<p style="text-align:center">
+Email: 2jomcd@gmail.com 
+<br>
+<a href="https://www.linkedin.com/in/mcdonoughjoe/" target="_blank" style="color: rgba(200,200,200,1)">Joe McDonough on LinkedIn: </a>
+</p>
+
+<center>
+
+<form name = "Carouselform">
+<img src = "Pismo.jpg"
+     name = "imgDisplay"
+     height = 300
+     width = 300>
+<br>
+<input name = "PicCaption"
+       value = "Pismo Beach">
+<br>
+<br>
+<input type = "button"
+      value = "Click here for Next Picture"
+      onClick = "upDate()">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="pelicans.jpg" align="left"> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p Style="text-align:left"> Pelicans </p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
